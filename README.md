@@ -1,0 +1,2 @@
+# SaveDataLibrary
+Unity環境で簡単にセーブデータ作成を行うためのライブラリ
