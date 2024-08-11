@@ -8,25 +8,25 @@ namespace Service.SaveLoad.Data
     public class SaveDataViewer : ScriptableSingleton<SaveDataViewer>
     {
         [SerializeField]
-        SampleData sampleData;
+        SampleData saveData;
 
         [ContextMenu("Save")]
         public void Save()
         {
-            TextFileManager<SampleData>.Save(sampleData);
+            TextFileManager<SampleData>.Save(saveData);
         }
 
         [ContextMenu("Load")]
         public void Load()
         {
-            TextFileManager<SampleData>.Load(sampleData);
+            TextFileManager<SampleData>.Load(saveData);
         }
 
         [ContextMenu("Reset")]
         public void Reset()
         {
-            sampleData.Reset();
-            TextFileManager<SampleData>.Save(sampleData);
+            saveData.Reset();
+            TextFileManager<SampleData>.Save(saveData);
         }
     }
 
